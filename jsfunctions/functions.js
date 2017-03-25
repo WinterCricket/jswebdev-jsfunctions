@@ -47,3 +47,18 @@ function factorial(num){
 	}
 	return result;
 }
+
+// function kebabToSnake(str){
+// 	var next = str.split("-").join("_");
+// 	return next;
+// }
+
+//or
+function kebabToSnake(str){
+	var next = str.replace(/-/g, "_");
+	return next;
+}
+function blonde(words){
+	var show = words.replace(/i/g, "y");
+	return show;
+}
