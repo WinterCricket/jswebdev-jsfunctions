@@ -3,11 +3,32 @@ var input = prompt("Now what?");
 
 while (input !== "quit"){
 	if(input === "list"){
-		console.log(actions);
+		listActions();
 	} else if (input === "new"){
-		var newAction = prompt("Enter new action");
-		actions.push(newAction);
+		newAction();
+	} else if (input === "delete"){
+		deleteAction();
 	}
 	var input = prompt("Now what?");
 }
 console.log("You've quit the app");
+
+function listActions(){
+	console.log("***********");
+	actions.forEach(function(action, i){
+		console.log(i + ": " + action);
+	});
+	console.log("***********");
+}
+
+function newAction(){
+	var newAction = prompt("Enter new action");
+	actions.push(newAction);
+	console.log("Action Added");
+}
+
+function deleteAction() {
+	var index = prompt("Enter index of action to be nixed.")
+	actions.splice(index, 1);
+	console.log("Action Deleted!");
+}
