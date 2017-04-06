@@ -24,6 +24,10 @@ var movieDB =[
 // }
 
 movieDB.forEach(function(movie){
+	console.log(buildString(movie));
+});
+
+function buildString(movie){
 	var result = "You have ";
 	if(movie.haveWatched){
 		result += "watched ";
@@ -32,5 +36,5 @@ movieDB.forEach(function(movie){
 	}
 	result += "\"" + movie.title + "\"" ;
 	result += " -"+ movie.rating + " stars";
-	console.log(result);
-});
+	return result;
+}

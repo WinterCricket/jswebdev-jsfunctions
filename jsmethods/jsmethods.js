@@ -21,3 +21,15 @@ alienSpace.method = function(){
 }
 
 alienSpace.name += " Rabbit";
+
+//comments and keyword this
+
+var comments = {};
+
+comments.data = ["Right on!", "Sometimes, maybe.", "What bull!"];
+
+comments.print = function(){
+	this.data.forEach(function(el){
+	console.log(el);
+});
+}
